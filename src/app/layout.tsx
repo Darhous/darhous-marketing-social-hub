@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" className="dark">
-      <body className={`${ibmPlexArabic.variable} font-arabic bg-background text-on-surface`}>
+    <html lang="ar" dir="rtl" className={`dark ${ibmPlexArabic.variable}`}>
+      <body className="font-arabic bg-background text-on-surface">
         <Navbar />
         <div className="min-h-[calc(100vh-64px)]">
           {children}

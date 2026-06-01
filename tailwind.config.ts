@@ -61,7 +61,6 @@ const config: Config = {
       },
       fontFamily: {
         arabic: ['var(--font-arabic)', 'IBM Plex Sans Arabic', 'sans-serif'],
-        sans: ['var(--font-arabic)', 'IBM Plex Sans Arabic', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-cyan-violet': 'linear-gradient(135deg, #00dbe7, #571bc1)',
