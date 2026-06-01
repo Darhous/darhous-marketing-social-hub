@@ -35,3 +35,8 @@ next-env.d.ts
 # Misc
 *.pem
 secrets/
+
+# Stitch design reference — local only, never commit
+# These are read-only design assets, not part of the app build
+stitch_darhous_marketing_hub/
+stitch_darhous_marketing_hub.zip
