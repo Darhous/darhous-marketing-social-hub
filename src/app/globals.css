@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  direction: rtl;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #11131b;
+  color: #e2e1ee;
+  font-family: var(--font-arabic), 'IBM Plex Sans Arabic', sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #11131b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a494b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #849495;
+}
+
+/* Focus rings */
+*:focus-visible {
+  outline: 2px solid #00dbe7;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Glass card utility */
+@layer components {
+  .glass {
+    background: rgba(29, 31, 40, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-nav {
+    background: rgba(17, 19, 27, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(225deg, #00dbe7, #571bc1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(225deg, #00dbe7, #d0bcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-card:hover {
+    box-shadow: 0 0 30px rgba(0, 219, 231, 0.1);
+  }
+}
+
+/* RTL input alignment */
+input, textarea, select {
+  text-align: right;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.2s ease-out;
+}
