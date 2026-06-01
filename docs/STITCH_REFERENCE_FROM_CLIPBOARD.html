@@ -1,0 +1,34 @@
+﻿cd "C:\Users\ahmed\Desktop\parrelled\social"
+
+Write-Host "=== Darhous Marketing Hub — Maestro Start ===" -ForegroundColor Cyan
+
+Write-Host "`n[1/6] Current location" -ForegroundColor Yellow
+Get-Location
+
+Write-Host "`n[2/6] Git status" -ForegroundColor Yellow
+git status
+
+Write-Host "`n[3/6] Git remote" -ForegroundColor Yellow
+git remote -v
+
+Write-Host "`n[4/6] Project files" -ForegroundColor Yellow
+Get-ChildItem -Force | Select-Object Mode, Length, Name
+
+Write-Host "`n[5/6] Save Stitch clipboard reference" -ForegroundColor Yellow
+New-Item -ItemType Directory -Force -Path ".\docs" | Out-Null
+Get-Clipboard | Set-Content -Path ".\docs\STITCH_REFERENCE_FROM_CLIPBOARD.html" -Encoding UTF8
+Write-Host "Saved clipboard to docs/STITCH_REFERENCE_FROM_CLIPBOARD.html" -ForegroundColor Green
+
+Write-Host "`n[6/6] Check Stitch downloaded folder" -ForegroundColor Yellow
+$stitchPath = "C:\Users\ahmed\Desktop\parrelled\social\stitch_darhous_marketing_hub\stitch_darhous_marketing_hub"
+
+if (Test-Path $stitchPath) {
+    Write-Host "Stitch folder found:" -ForegroundColor Green
+    Write-Host $stitchPath -ForegroundColor Cyan
+    Get-ChildItem $stitchPath -Recurse | Select-Object -First 30 FullName
+} else {
+    Write-Host "Stitch folder not found. Check path." -ForegroundColor Red
+}
+
+Write-Host "`nOpen VS Code..." -ForegroundColor Cyan
+code .
