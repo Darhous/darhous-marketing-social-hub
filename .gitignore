@@ -36,6 +36,9 @@ next-env.d.ts
 *.pem
 secrets/
 
+# Claude Code local settings
+.claude/
+
 # Stitch design reference — local only, never commit
 # These are read-only design assets, not part of the app build
 stitch_darhous_marketing_hub/

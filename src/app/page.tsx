@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import GlassCard from '@/components/ui/GlassCard'
 import GradientButton from '@/components/ui/GradientButton'
+
+export const metadata: Metadata = {
+  title: 'الرئيسية | درهوس للتسويق',
+  description: 'بوابة التسويق الرقمي العربية — منصة متكاملة للتعلم والأدوات والمحتوى، مصممة للمحترفين العرب.',
+}
 
 const stats = [
   { value: '+١٠٠', label: 'مسار تعليمي' },

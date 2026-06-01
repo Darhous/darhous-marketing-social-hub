@@ -1,8 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import AppShell from '@/components/layout/AppShell'
 import PageShell from '@/components/layout/PageShell'
 import GlassCard from '@/components/ui/GlassCard'
 import GradientButton from '@/components/ui/GradientButton'
+
+export const metadata: Metadata = {
+  title: 'مسارات التعلم | درهوس للتسويق',
+  description: 'مسارات تعليمية منظمة في التسويق الرقمي والسوشيال ميديا — من المبتدئ إلى المحترف.',
+}
 
 interface PathCard {
   slug: string

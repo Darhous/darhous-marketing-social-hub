@@ -1,8 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import AppShell from '@/components/layout/AppShell'
 import PageShell from '@/components/layout/PageShell'
 import GlassCard from '@/components/ui/GlassCard'
 import GradientButton from '@/components/ui/GradientButton'
+
+export const metadata: Metadata = {
+  title: 'لوحة التحكم | درهوس للتسويق',
+  description: 'لوحة تحكم المستخدم — تتبع تقدمك، إدارة الأدوات والقوالب.',
+}
 
 const statsCards = [
   { label: 'مسارات مكتملة', value: '٢', icon: 'school', accent: 'cyan' as const },

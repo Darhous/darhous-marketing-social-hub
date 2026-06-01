@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import AppShell from '@/components/layout/AppShell'
 import PageShell from '@/components/layout/PageShell'
 import GlassCard from '@/components/ui/GlassCard'
+
+export const metadata: Metadata = {
+  title: 'التكامل | درهوس للتسويق',
+  description: 'جاهزية التكامل مع منظومة درهوس للتعلم الذكي — نقاط الاتصال والخطة المستقبلية.',
+}
 
 interface IntegrationPoint {
   title: string

@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import AppShell from '@/components/layout/AppShell'
 import PageShell from '@/components/layout/PageShell'
 import GlassCard from '@/components/ui/GlassCard'
+
+export const metadata: Metadata = {
+  title: 'لوحة الإدارة | درهوس للتسويق',
+  description: 'إمكانات الإدارة القادمة — إدارة المستخدمين، التحليلات، المحتوى، والتقارير.',
+}
 
 interface AdminFeature {
   title: string
